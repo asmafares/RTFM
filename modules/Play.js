@@ -18,10 +18,10 @@ export default class Console extends React.Component {
 
   processInput(event) {
     var consoleHistory = this.state.consoleHistory;
-    console.log(CommandParser(this.state.value));
+    var textList = CommandParser(this.state.value);
     this.setState({
       value: '',
-      consoleHistory: consoleHistory.concat(this.state.value)
+      consoleHistory: consoleHistory.concat(textList)
     });
     event.preventDefault();
   }
@@ -29,8 +29,8 @@ export default class Console extends React.Component {
   render() {
   //TODO: change to stable key
   var consoleHistory = this.state.consoleHistory;
-    const consolelog = consoleHistory.map((commands) =>
-      <p key={commands}>
+    const consolelog = consoleHistory.map((commands, index) =>
+      <p key={index}>
         {commands}
       </p>
     );
