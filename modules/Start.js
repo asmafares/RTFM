@@ -2,33 +2,10 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export default class Start extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.updateScreen = this.updateScreen.bind(this);
-  }
 
-  updateScreen() {
-    var textList = ["Congratulations!",
-                    "You have successfully completed: SPACESHIP PILOT EXAM: LEVEL 2.",
-                    "This earns you the rank of SPACESHIP NEWBIE and authorizes you to apply for the following positions: SPACE GARBAGE COLLECTOR.",
-                    "You may now attempt SPACESHIP PILOT EXAM: LEVEL 3.",
-                    "The next administration of this exam will take place in PLANET GGJ TESTING CENTER on JANUARY 25 2255.",
-                    "This test will consist of: MANUAL ENGINE FAILURE DIAGNOSIS with a time limit of 10 MINUTES and NO MANUAL OR SUPPLEMENTARY MATERIAL.",
-                    "Good luck!"]
-      var currentNumber = this.state.currentNumber;
-
-    if(currentNumber < textList.length-1){
-        currentNumber++;
-        this.setState({
-          text : textList[currentNumber],
-          currentNumber : currentNumber
-        });
-    }
-  }
-
+    //TODO: Trigger new paragraphs w/ click; add blinking cursor
+    //TODO: Style links
 	render() {
-		//TODO: More precise implementation- add a paragraph at a time, and a blinking cursor.
 		return (
 			<div id="start">
 			<p>You're not quite sure how you got to this point, but you're pretty sure it's someone at Mission Control's fault. </p>

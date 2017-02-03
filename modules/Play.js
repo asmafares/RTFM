@@ -38,7 +38,9 @@ export default class Console extends React.Component {
     event.preventDefault();
   }
 
-  //TODO: Support proper scrolling-to-bottom instead of the hacky reverse thing you have
+  //TODO: Autoscroll console history
+  //TODO: Fix autofocus on console
+  //TODO: Change style for hints
   render() {
   var consoleHistory = this.state.consoleHistory;
     const consolelog = consoleHistory.map((commands, index) =>
