@@ -9,4 +9,3 @@ A puzzle game set on a crashing spaceship
 Uses React and React-Router.
 Boilerplate based off here.
 
-[Next: Nested Routes](../04-nested-routes/)

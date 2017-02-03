@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CommandParser from './CommandParser'
 
 //TODO: Figure out how to make this look like the ones in Start.js and App.js
 export default class Console extends React.Component {
@@ -18,6 +18,7 @@ export default class Console extends React.Component {
 
   processInput(event) {
     var consoleHistory = this.state.consoleHistory;
+    console.log(CommandParser(this.state.value));
     this.setState({
       value: '',
       consoleHistory: consoleHistory.concat(this.state.value)
