@@ -38,6 +38,7 @@ export default class Console extends React.Component {
     event.preventDefault();
   }
 
+  //TODO: Support proper scrolling-to-bottom instead of the hacky reverse thing you have
   render() {
   var consoleHistory = this.state.consoleHistory;
     const consolelog = consoleHistory.map((commands, index) =>
@@ -48,13 +49,15 @@ export default class Console extends React.Component {
 
     return (
 
-      <div>
+      <div id="console">
 
-        <ul>{consolelog}</ul>
+        <div id="consolehistory">
+          {consolelog}
+        </div>
 
-        <form onSubmit={this.processInput} id="console">
+        <form onSubmit={this.processInput} id="consolesubmit">
           <label>
-            <input type="text" value={this.state.value} onChange={this.displayInput}/>
+            <input type="text" autofocus="autofocus" value={this.state.value} onChange={this.displayInput}/>
           </label>
           <input type="submit" value="Submit" />
         </form>

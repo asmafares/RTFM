@@ -12,7 +12,7 @@ var environment = {directory: "MODES", program: null, currentStep : 'runEmergenc
 var hintlevel = -1;
 var endgame = false;
 var directoryList = ["MODES", "TOOLKIT", "DATA"];
-
+var fakeProgramList = ["INITIAL_TAKEOFF_MODE", "INITIAL_TAKEOFF_MODE_BACKUP", "LANDING_MODE", "LANDING_MODE_BACKUP", "CRUISING_MODE", "CRUISING_MODE_BACKUP"];
 /*
 * Checks if player has requested help, performed an operation while currently in a program,
 * or performed an operation while currently in a directory and responds accordingly
@@ -48,11 +48,14 @@ function ParseDirectory(command){
 			environment.program = commandtokens[1];
 			return (programList[commandtokens[1]])();
 		}
+		else if(fakeProgramList[commandtokens[1]]){
+				return commandtokens[1] + " IS NOT AVAILABLE IN MANUAL MODE.";
+		}
 		else if (commandtokens[1]){
-				return commandtokens[1] + " IS NOT A PROGRAM IN THIS DIRECTORY."
-			}
+				return commandtokens[1] + " IS NOT A PROGRAM IN THIS DIRECTORY.";
+		}
 		else{
-			return "NO PROGRAM SPECIFIED."
+			return "NO PROGRAM SPECIFIED.";
 		}
 	}
 	else if(commandtokens[0] == "U"){
@@ -73,10 +76,10 @@ function ParseDirectory(command){
 			return "YOU ARE ALREADY IN " + environment.directory + "!";
 		}
 		else if (commandtokens[1]){
-			return commandtokens[1] + " IS NOT A DIRECTORY IN THIS DIRECTORY"
+			return commandtokens[1] + " IS NOT A DIRECTORY IN THIS DIRECTORY";
 		}
 		else{
-			return "NO DIRECTORY SPECIFIED."
+			return "NO DIRECTORY SPECIFIED.";
 		}
 	}
 	else{

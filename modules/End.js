@@ -30,10 +30,10 @@ export default class End extends React.Component {
         });
     }
   }
-
+  //TODO: Figure out how to get this to respond to a keypress...
   render() {
     return (
-      <div id="endgame" onClick={this.updateScreen}>
+      <div id="endgame" onClick={this.updateScreen} >
         <h2 >{this.state.text}</h2>
       </div>
     );
