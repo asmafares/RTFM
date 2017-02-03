@@ -41,7 +41,7 @@ function CommandParser(command){
 */
 function ParseDirectory(command){
 	if(commandtokens[0] == "EXT"){
-		return "You are not currently in a program."
+		return "YOU ARE NOT CURRENTLY IN A PROGRAM."
 	}
 	else if(commandtokens[0] == "EXC"){
 		if(programList[commandtokens[1]]){
@@ -150,7 +150,7 @@ var programList ={
 function ParseLandingMode(command){
 	if(commandtokens[0] == "EXT"){
 		environment.program = null;
-		return ["Current Directory: " + environment.directory];
+		return ["CURRENT DIRECTORY: " + environment.directory];
 	}
 	else if(environment.gaveModePin == false){
 		if(commandtokens[0] == 2030){

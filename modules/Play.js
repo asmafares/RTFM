@@ -8,7 +8,13 @@ export default class Console extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {consoleHistory : [], value: ''};
+    this.state = {consoleHistory : [
+    "ASTEROID IMPACT DAMAGE: HIGH",
+    "CURRENT STATUS: FREE FALL",
+    "AUTOPILOT TURNED OFF TO MINIMIZE POWER COST",
+    "PLEASE ACTIVATE EMERGENCY_LANDING_MODE",
+    "(If you need a hint, enter HELP!)"
+      ], value: ''};
 
     this.displayInput = this.displayInput.bind(this);
     this.processInput = this.processInput.bind(this);
@@ -48,7 +54,6 @@ export default class Console extends React.Component {
 
         <form onSubmit={this.processInput} id="console">
           <label>
-            >
             <input type="text" value={this.state.value} onChange={this.displayInput}/>
           </label>
           <input type="submit" value="Submit" />
