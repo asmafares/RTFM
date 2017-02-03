@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "webpack-dev-server --inline --content-base public/ --history-api-fallback",
-    "start:prod": "webpack && node server.js"
+    "start": "webpack && node server.js"
   },
   "author": "",
   "license": "ISC",
