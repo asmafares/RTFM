@@ -1,5 +1,8 @@
 import React from 'react'
-import CommandParser from './CommandParser'
+import {CommandParser, endgame} from './CommandParser'
+import { browserHistory } from 'react-router';
+
+
 
 export default class Console extends React.Component {
 
@@ -16,6 +19,10 @@ export default class Console extends React.Component {
   }
 
   processInput(event) {
+    if(endgame ==true){
+      browserHistory.push('/end');
+
+    }
     var consoleHistory = this.state.consoleHistory;
     var textList = CommandParser(this.state.value);
     this.setState({

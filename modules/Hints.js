@@ -2,7 +2,7 @@ const hints =	{
 	"runEmergencyLandingMode" : 
 		["Hm... how do I run a program, again? I better check the manual.",
 		 "I should be able to find the run command on the List of Commands page of the manual.", 
-		 "Oh, I remember! I's \"exc emergency_landing_mode\"."],
+		 "Oh, I remember! It's \"exc emergency_landing_mode\"."],
 	"runBackup" : 
 		["It looks like I might be the wrong directory.",
 		 "Hmm... I wonder if I can find anything useful in the Index.",
@@ -23,9 +23,6 @@ const hints =	{
 		"Let's check the Command List again.",
 		"Hm... which directory is it likely to be in? I wonder if Chapter 4.3 contains any hints...",
 		"It's in the data directory!"],
-	"end":
-		["Alright! All that's left is to re-run emergency_landing_mode, I think..."
-		]
 
 
 };
