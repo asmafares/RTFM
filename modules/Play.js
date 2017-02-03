@@ -41,7 +41,7 @@ export default class Console extends React.Component {
 
         <ul>{consolelog}</ul>
 
-        <form onSubmit={this.processInput}>
+        <form onSubmit={this.processInput} id="console">
           <label>
             >
             <input type="text" value={this.state.value} onChange={this.displayInput}/>

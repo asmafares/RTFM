@@ -7,9 +7,10 @@ export default class App extends React.Component {
     return (<div>
     	<h1> RTFM</h1>
     	<ul role = "nav">
-    		<li><Link to="/start">Start</Link></li>
+    		<li id="start"><Link to="/start">Start</Link></li>
     		</ul>
     		</div>
     		)
   }
 }
+				

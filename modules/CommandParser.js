@@ -5,7 +5,7 @@ All game logic occurs here. CommandParser returns an array of strings, which Pla
 
 */
 
-var environment = {location: '' /*may be a directory or a program*/, currentStep : '' /*used to find hints*/, /*everything else is just going to be specific variables, like whether or not backup has been installed, or not.*/};
+var environment = {directory: '', program: '' /*is none when no program running*/, currentStep : '' /*used to find hints*/, /*everything else is just going to be specific variables, like whether or not backup has been installed, or not.*/};
 
 //TODO: move Hints to a separate file
 var hints = {
@@ -29,12 +29,15 @@ export default function CommandParser(command){
 
 
 function ParseProgram(command){
-	//TODO
+	var commandtokens = command.toUpperCase.split(" ");
+	if(commandtokens[0] == "ext"){
+		environment.program = 'none';
+		return "Current Directory:" + environment.directory;
+	}
 }
 
 //This is quick and dirty.
 
-//TODO: make it so that directories start with something like directoryToolkit so you only have 1 field but can still determine if something STARTS with directory
 //TODO: reorganize this so it isn't a mess of if statements
 /*
 function ParseDirectory(command){
