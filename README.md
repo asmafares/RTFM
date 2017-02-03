@@ -1,34 +1,12 @@
-# Navigating with Link
+# RTFM
 
-Perhaps the most used component in your app is `Link`. It's almost
-identical to the `<a/>` tag you're used to except that it's aware of
-the `Router` it was rendered in.
+A puzzle game set on a crashing spaceship
 
-Let's create some navigation in our `App` component.
-
-```js
-// modules/App.js
-import React from 'react'
-import { Link } from 'react-router'
-
-export default React.createClass({
-  render() {
-    return (
-      <div>
-        <h1>React Router Tutorial</h1>
-        <ul role="nav">
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/repos">Repos</Link></li>
-        </ul>
-      </div>
-    )
-  }
-})
-```
-
-Now visit [http://localhost:8080](http://localhost:8080) and click the links, click back, click
-forward. It works!
+[Play it here!](google.com)
 
 ---
+
+Uses React and React-Router.
+Boilerplate based off here.
 
 [Next: Nested Routes](../04-nested-routes/)
